@@ -158,11 +158,20 @@
             padding: 50px 20px;
         }
         .container h1 {
-            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 48px;
-        }
+            background: linear-gradient(
+                to right,
+                #0aabd5,
+                #045db0,
+                #7cb4ec,
+                #99d6e6,
+                #9cc4cc
+            );
+            background-clip: text;
+            -webkit-background-clip: text; /* For WebKit browsers */
+            color: transparent; /* Make the text color transparent to show gradient */
+            font-size: 48px; /* Adjust the size as needed */
+            font-weight: bold; /* Adjust the weight as needed */
+        }       
         .container h2 {
             color: #7f7f7f;
             font-size: 24px;
