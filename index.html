@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini</title>
+    <title>ChatBot</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Existing CSS */
@@ -24,7 +24,7 @@
             background: white;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
             transition: left 0.3s ease;
-            z-index: 1000;
+            z-index: 5000;
             padding: 20px;
         }
 
@@ -283,23 +283,40 @@
         #sidePanelToggle {
             position: fixed;
             top: 20px;
-            left: 20px;
-            background: #ffffff;
+            left: 15px;
+            color: white;
+            background: none;
             font-size: 24px;
             cursor: pointer;
             outline: none; /* Remove outline */
             border: none; /* Remove border */
+            z-index: 1001; /* Ensure the button is above the line */
         }
 
         .file-input {
             display: none;
+        }
+
+        .vertical-line {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 60px; /* Thickness of the line */
+            height: 100%; /* Full height of the viewport minus some offset */
+            background: linear-gradient(
+                to bottom,
+                #0aabd5,
+                #0aabd5 50%,
+                #00aaff
+            );
+            z-index: 1000; /* Ensure it is behind the button */
         }
     </style>
 </head>
 <body>
     <div class="hero">
         <nav>
-            <h1>Chatbot</h1>
+            <h1>LiamBot</h1>
             <img src="user.svg" class="user" id="userIcon">
             <button id="sidePanelToggle"><i class="fas fa-bars"></i></button> <!-- Side Panel Toggle Button -->
 
@@ -342,12 +359,19 @@
         <p>Content goes here...</p>
     </div>
 
+    <!-- Vertical Line -->
+    <div class="vertical-line"></div>
+
     <div class="container">
         <h1>Hello, Philip</h1>
         <h2>How can I help you today?</h2>
         <div class="card-container">
             <div class="card">
                 <p>Help me find the latest trends</p>
+                <button>Choose</button>
+            </div>
+            <div class="card">
+                <p>Show me the best practices</p>
                 <button>Choose</button>
             </div>
             <div class="card">
