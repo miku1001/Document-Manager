@@ -1,0 +1,21 @@
+python-poppler is a Python binding to the poppler-cpp library. 
+It allows to read, render, or modify PDF documents.
+Poppler is one of the things that's needed in this program.
+
+Follow these steps to install Poppler on Windows:
+
+Step 1: Download Poppler
+- Visit the "https://github.com/oschwartz10612/poppler-windows/releases/"
+- Download the latest version (poppler-xx.x.x-x86_64.zip).
+- Extract the zip file to a directory (e.g., C:\Program Files\poppler).
+
+Step 2: Add to System PATH
+- Open Control Panel > System > Advanced system settings.
+- Click Environment Variables, then edit the Path under System Variables.
+- Add C:\Program Files\poppler\bin (or your installation path) to the PATH.
+
+Step 3: Verify Installation
+- Run the following in Command Prompt to confirm installation: where pdftoppm
+- This command should return the path to the poppler executable.
+
+
